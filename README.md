@@ -1,6 +1,6 @@
 # PairSAT CNF Formula Generator
 
-This repository contains a single Python script (`cnf-fuzz-pairSAT.py`) that generates Conjunctive Normal Form (CNF) formulas in the DIMACS format. The generator is specifically designed for model counting experiments and produces formulas in pairs. The name “PairSAT” comes from its unique clause generation strategy: 
+This repository contains a Python script (`cnf-fuzz-pairSAT.py`) that generates Conjunctive Normal Form (CNF) formulas in the DIMACS format. The generator is specifically designed for model counting. The name “PairSAT” comes from its pair-wise clause generation strategy: 
 
 - **Odd-numbered clauses** are generated randomly.
 - **Even-numbered clauses** are derived from the previous clause, with random polarity flips or literal changes.
@@ -10,7 +10,7 @@ This repository contains a single Python script (`cnf-fuzz-pairSAT.py`) that gen
 - Generates CNF formulas in **DIMACS** format.
 - Configurable through a variety of parameters to suit different experimental needs.
 - Randomness is tied to a **seed** for reproducibility.
-- Designed to integrate seamlessly with [SharpVelvet](https://github.com/meelgroup/SharpVelvet) as a generator in src/generators.
+- Designed to integrate with [SharpVelvet](https://github.com/meelgroup/SharpVelvet) as a generator in `src/generators`.
 
 ## Parameters
 
@@ -23,8 +23,8 @@ The following parameters can be set when running the script:
 | `--threads`              | `int`    | `1`     | Number of threads for parallel generation.                                  |
 | `--min-clauses`          | `int`    | `400`   | Minimum number of clauses per instance.                                     |
 | `--max-clauses`          | `int`    | `400`   | Maximum number of clauses per instance.                                     |
-| `--min-vars`             | `int`    | `90`   | Minimum number of variables per instance.                                   |
-| `--max-vars`             | `int`    | `90`   | Maximum number of variables per instance.                                   |
+| `--min-vars`             | `int`    | `90`    | Minimum number of variables per instance.                                   |
+| `--max-vars`             | `int`    | `90`    | Maximum number of variables per instance.                                   |
 | `--min-clause-len`       | `int`    | `2`     | Minimum number of literals in a clause.                                     |
 | `--max-clause-len`       | `int`    | `6`     | Maximum number of literals in a clause.                                     |
 | `--min-refs`             | `int`    | `1`     | Minimum number of references for each variable across all clauses.          |
@@ -64,7 +64,7 @@ This specifies a formula with 3 variables and 5 clauses.
 Citing
 
 ```
-@software{PairSAT,
+@software{PairSAT_2025,
   author = {Vuk Jurišić},
   title = {PairSAT},
   url = {https://github.com/Chevuu/PairSAT},
