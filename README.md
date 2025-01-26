@@ -66,7 +66,7 @@ Citing
 ```
 @software{PairSAT,
   author = {Vuk Jurišić},
-  title = {PairSAY},
+  title = {PairSAT},
   url = {https://github.com/Chevuu/PairSAT},
   date = {2025-01-26},
 }
